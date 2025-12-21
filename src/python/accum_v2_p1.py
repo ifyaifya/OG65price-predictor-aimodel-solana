@@ -3,8 +3,10 @@
 f=open("/sol/1","rb")
 d=f.read()
 f.close()
-p=d[208]|d[209]<<8|d[210]<<16|d[211]<<24
-c=p//10000
+# Read full 64-bit price
+p=d[208]|d[209]<<8|d[210]<<16|d[211]<<24|d[212]<<32|d[213]<<40|d[214]<<48|d[215]<<56
+# Convert to cents (expo=-8): price/10^8 * 100 = price/10^6
+c=p//1000000
 g=open("/sol/2","rb")
 a=list(g.read())
 g.close()

@@ -22,7 +22,7 @@ h2=s[4]|s[5]<<8
 
 # Decoder weights (8 INT8 params)
 # D[0-2]: output 0 weights, D[3-5]: output 1 weights, D[6-7]: biases
-D=[-5,8,-3,6,-4,10,100,80]
+D=[5,125,-35,25,-8,-46,-51,0]
 
 # Output layer
 o0=D[6]+h0*D[0]+h1*D[1]+h2*D[2]
