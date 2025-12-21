@@ -1,0 +1,15 @@
+{
+  "name": "price-predictor",
+  "version": "1.0.0",
+  "description": "On-chain neural network for predicting short-term price direction on Solana.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4"
+  }
+}
