@@ -1,0 +1,12 @@
+{
+  "network": "devnet",
+  "programId": "AdvFUgScZPQmnkhCZ1ZFMN7c1rsanoE7TfYbikggUAxM",
+  "accounts": {
+    "module": "<YOUR_MODULE_ACCOUNT_PUBKEY>",
+    "weights": "<YOUR_WEIGHTS_ACCOUNT_PUBKEY>",
+    "features": "<YOUR_FEATURES_ACCOUNT_PUBKEY>"
+  },
+  "bytecodeSize": 3992,
+  "weightsSize": 65,
+  "deployedAt": "<DEPLOYMENT_TIMESTAMP>"
+}

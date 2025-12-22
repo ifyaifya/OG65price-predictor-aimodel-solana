@@ -16,14 +16,14 @@ const CONFIG = {
   SOL_USD_FEED: 'ef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d',
 
   // Collection settings
-  DEFAULT_DURATION: 3600,  // 1 hour in seconds
-  DEFAULT_INTERVAL: 5,     // seconds between samples
-  LOOKAHEAD_SLOTS: 10,     // ~4 seconds on Solana (400ms/slot)
-  LOOKAHEAD_SECONDS: 4,    // Time to wait for "future" price
+  DEFAULT_DURATION: 7200,  // 2 hours in seconds
+  DEFAULT_INTERVAL: 10,    // seconds between samples
+  LOOKAHEAD_SLOTS: 150,    // ~60 seconds on Solana (400ms/slot)
+  LOOKAHEAD_SECONDS: 60,   // 1 minute for future price
 
-  // Direction thresholds
-  UP_THRESHOLD: 0.0005,    // 0.05% = bullish
-  DOWN_THRESHOLD: -0.0005, // -0.05% = bearish
+  // Direction thresholds (increased for 1-min timeframe)
+  UP_THRESHOLD: 0.002,     // 0.2% = bullish
+  DOWN_THRESHOLD: -0.002,  // -0.2% = bearish
 };
 
 /**
@@ -196,14 +196,14 @@ async function collectData(options = {}) {
       if (priceData) {
         priceHistory.push(priceData);
 
-        // Keep last 60 seconds of data for feature calculation
-        const cutoff = Date.now() - 60000;
+        // Keep last 120 seconds of data for feature calculation
+        const cutoff = Date.now() - 120000;
         while (priceHistory.length > 0 && priceHistory[0].timestamp < cutoff) {
           priceHistory.shift();
         }
 
-        // Calculate features if we have enough history
-        if (priceHistory.length >= 12) {
+        // Calculate features if we have enough history (6 samples minimum)
+        if (priceHistory.length >= 6) {
           const features = calculateFeatures(priceHistory);
           const normalized = normalizeFeatures(features);
 

@@ -1,4 +1,31 @@
+# Dependencies
 node_modules/
+
+# Build artifacts
 *.bin
 bytecode/
+
+# Deployment (contains real account addresses)
+deployment.json
+
+# OS files
 .DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+/tmp/
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Archived scripts (optional - uncomment to include)
+# src/scripts/_archived/
