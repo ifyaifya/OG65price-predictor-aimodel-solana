@@ -78,6 +78,7 @@ Result: 53.5% → 59.2% (+5.7%)
 | Transactions | 2 per inference |
 | Cost | ~$0.002 per prediction |
 | Network | Devnet |
+| SolanaPython Program | `AdvFUgScZPQmnkhCZ1ZFMN7c1rsanoE7TfYbikggUAxM` |
 
 ## How It Works
 
