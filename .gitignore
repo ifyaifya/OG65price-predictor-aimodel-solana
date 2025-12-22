@@ -27,5 +27,7 @@ __pycache__/
 .venv/
 venv/
 
-# Archived scripts (optional - uncomment to include)
-# src/scripts/_archived/
+# Archived/experimental files
+_archived/
+*/_archived/
+**/_archived/

@@ -188,7 +188,8 @@ node src/scripts/user_inference.js 128,135,20,130,150,100
 │       └── train_optimal.py   # Training script
 ├── weights/
 │   └── optimal_model.bin      # Trained weights (65 bytes)
-└── data/                      # Training data
+├── data/                      # Training data
+└── deployment.json.example    # Deployment template
 ```
 
 ## Limitations & Learnings
