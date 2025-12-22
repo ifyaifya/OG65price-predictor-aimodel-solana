@@ -58,6 +58,14 @@ No numpy. No libraries. Just addition, multiplication, and integer division.
 
 Trained on SOL/USDT data from Binance (1-minute candles).
 
+### Optimization
+
+We started at 53.5% accuracy. To improve, we applied techniques from [xLSTM-TS](https://arxiv.org/abs/2408.12408) (arXiv:2408.12408), a paper that achieved 72.82% on stock trend prediction.
+
+Key insight: raw price data is noisy. The paper uses wavelet denoising. We used a simpler approach for on-chain compatibility: **exponential moving average (EMA) smoothing** before feature extraction. This filters out micro-fluctuations while preserving the trend signal.
+
+Result: 53.5% → 59.2% (+5.7%)
+
 *Is 59.2% good? It's better than a coin flip. For a 65-byte model running on a blockchain VM, we'll take it.*
 
 ## On-Chain Stats
