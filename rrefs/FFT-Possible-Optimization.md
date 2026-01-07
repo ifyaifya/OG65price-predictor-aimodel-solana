@@ -1,7 +1,7 @@
 ##-- Presentation of Fast Fourier Transform (FFT) as a proven method of non-lossy digital comprsesion --##
 ##-- And an explanation of why it may be a higher fidelity method to optimmize for price prediction   --##
 
-# An idea to improve the denoising of the input data whilst decresing memory overhead before feature extraction.
+# An idea to improve the denoising of the input data whilst decreasing memory overhead before feature extraction.
 
 The current denoising is the EMA, I believe that it is likely possible to reduce the memory expenditure on denoising.
 There are are some specific implimentations of the Fast Fourier Transform am algorithm which is used widely digital signal compression which may enable selective and dynamic demodulation of undesirable frequencies in the input price data.
